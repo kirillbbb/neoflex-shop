@@ -1,0 +1,98 @@
+.card {
+  width: 350px;
+  height: 407px;
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  height: 250px;   /* было 240 */
+  padding-top: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__image img {
+  max-width: 220px;
+  max-height: 237px;
+  object-fit: contain;
+}
+
+.card__info {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 32px;
+}
+
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 25px;
+}
+
+.card__prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card__priceCurrent {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--price-main);
+}
+
+.card__priceOld {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--price-old);
+  text-decoration: line-through;
+}
+
+.card__rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.card__rating img {
+  width: 20px;
+  height: 20px;
+}
+
+.card__buy {
+
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

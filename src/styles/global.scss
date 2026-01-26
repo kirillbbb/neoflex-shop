@@ -1,0 +1,28 @@
+@import './variables';
+@import './layout';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
