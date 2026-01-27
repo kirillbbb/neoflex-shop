@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header/Header';
 import { products } from '@/data/products';
 import { ProductCard } from '@/components/ProductCard/ProductCard';
 
@@ -8,7 +7,6 @@ const wireless = products.filter((p) => p.category === 'wireless');
 export const CatalogPage = () => {
     return (
         <>
-            <Header />
 
             <main className="container catalog">
                 <section className="catalog__section">

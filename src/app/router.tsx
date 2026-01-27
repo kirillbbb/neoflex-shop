@@ -1,8 +1,20 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { CatalogPage } from '@/pages/CatalogPage/CatalogPage.tsx';
-import { CartPage } from '@/pages/CartPage/CartPage.tsx';
+import { Layout } from '@/layouts/Layout';
+import { CatalogPage } from '@/pages/CatalogPage/CatalogPage';
+import { CartPage } from '@/pages/CartPage/CartPage';
 
 export const router = createBrowserRouter([
-    { path: '/', element: <CatalogPage /> },
-    { path: '/cart', element: <CartPage /> },
+    {
+        element: <Layout />,
+        children: [
+            {
+                path: '/',
+                element: <CatalogPage />,
+            },
+            {
+                path: '/cart',
+                element: <CartPage />,
+            },
+        ],
+    },
 ]);

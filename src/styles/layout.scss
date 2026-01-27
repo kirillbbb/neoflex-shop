@@ -1,11 +1,30 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .container {
   max-width: 1130px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.container--wide {
+  max-width: 1200px;
+}
+
 .catalog {
-  padding-top: 24px;
+  padding-top: 10px;
 }
 
 .catalog__section {
@@ -22,5 +41,5 @@
 .catalog__grid {
   display: grid;
   grid-template-columns: repeat(3, 350px);
-  gap: var(--grid-gap);
+  gap: 30px;
 }
