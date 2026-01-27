@@ -11,7 +11,7 @@ export const CartPage = () => {
     const formattedTotal = totalPrice.toLocaleString('ru-RU');
 
     return (
-        <div className="container">
+        <div className="container container--wide">
             <h1 className={styles.title}>Корзина</h1>
 
             {items.length === 0 && (

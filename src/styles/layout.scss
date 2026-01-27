@@ -14,14 +14,12 @@ main {
 }
 
 .container {
-  max-width: 1130px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.container--wide {
-  max-width: 1200px;
-}
+
 
 .catalog {
   padding-top: 10px;
@@ -42,4 +40,12 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 350px);
   gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .catalog__grid {
+    grid-template-columns: repeat(3, 300px);
+    gap: 24px;
+    justify-content: center;
+  }
 }

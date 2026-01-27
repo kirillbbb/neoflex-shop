@@ -4,11 +4,11 @@
   font-weight: 600;
 }
 
-
 .layout {
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 172px;
+  padding-bottom: 30px;
 }
 
 .items {

@@ -1,11 +1,14 @@
 import { RouterProvider } from 'react-router-dom';
 import { CartProvider } from '@/context/CartContext';
+import { FavoritesProvider } from '@/context/FavoritesContext';
 import { router } from './router';
 
 export const App = () => {
     return (
-        <CartProvider>
-            <RouterProvider router={router} />
-        </CartProvider>
+        <FavoritesProvider>
+            <CartProvider>
+                <RouterProvider router={router} />
+            </CartProvider>
+        </FavoritesProvider>
     );
 };

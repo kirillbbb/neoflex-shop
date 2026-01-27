@@ -1,30 +1,40 @@
 import { useContext } from 'react';
 import { CartContext } from '@/context/CartContext';
+import { FavoritesContext } from '@/context/FavoritesContext';
 import styles from './Header.module.scss';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-interface HeaderProps {
-    isWide?: boolean;
-}
+import { useNavigate, Link } from 'react-router-dom';
 
-export const Header = ({ isWide }: HeaderProps) => {
+export const Header = () => {
+    const navigate = useNavigate();
+
+    const favoritesCtx = useContext(FavoritesContext);
+    const favoritesCount = favoritesCtx?.favorites.length ?? 0;
+
     const cart = useContext(CartContext);
-
     const cartCount = cart?.totalCount ?? 0;
 
-    const navigate = useNavigate();
+
     return (
         <header className={styles.header}>
-            <div className={`container ${isWide ? 'container--wide' : ''}`}>
-                <div className={`container ${styles.header__inner}`}>
+            <div className="container">
+                <div className={styles.header__inner}>
                     <Link to="/" className={styles.header__logo}>
                         QPICK
                     </Link>
 
                     <div className={styles.header__actions}>
-                        <button className={styles.header__icon}>
+                        <button
+                            className={styles.header__icon}
+                            onClick={() => navigate('/favorites')}
+                        >
                             <div className={styles.header__iconWrapper}>
                                 <img src="/icons/favorite-icon.svg" alt="favorites" />
+
+                                {favoritesCount > 0 && (
+                                    <span className={styles.header__badge}>
+                                    {favoritesCount}
+                                    </span>
+                                )}
                             </div>
                         </button>
 
@@ -34,18 +44,16 @@ export const Header = ({ isWide }: HeaderProps) => {
                         >
                             <div className={styles.header__iconWrapper}>
                                 <img src="/icons/cart-icon.svg" alt="cart" />
-
                                 {cartCount > 0 && (
                                     <span className={styles.header__badge}>
-                            {cartCount}
-                                </span>
+                                    {cartCount}
+                                    </span>
                                 )}
                             </div>
                         </button>
                     </div>
                 </div>
             </div>
-
         </header>
     );
 };

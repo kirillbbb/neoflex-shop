@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import type { Product } from '@/types/product';
 import { CartContext } from '@/context/CartContext';
+import { FavoritesContext } from '@/context/FavoritesContext';
 import styles from './ProductCard.module.scss';
 
 interface ProductCardProps {
@@ -9,12 +10,32 @@ interface ProductCardProps {
 
 export const ProductCard = ({ product }: ProductCardProps) => {
     const cart = useContext(CartContext);
-    if (!cart) return null;
+    const favoritesCtx = useContext(FavoritesContext);
+
+    if (!cart || !favoritesCtx) return null;
 
     const { addToCart } = cart;
+    const { favorites, toggleFavorite } = favoritesCtx;
+
+    const isFavorite = favorites.includes(product.id);
 
     return (
         <div className={styles.card}>
+            {/* ❤️ ИЗБРАННОЕ */}
+            <button
+                className={styles.card__favorite}
+                onClick={() => toggleFavorite(product.id)}
+            >
+                <img
+                    src={
+                        isFavorite
+                            ? '/icons/favorite-active-icon.svg'
+                            : '/icons/favorite-icon.svg'
+                    }
+                    alt="favorite"
+                />
+            </button>
+
             <div className={styles.card__image}>
                 <img src={product.img} alt={product.title} />
             </div>
@@ -25,13 +46,13 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 
                     <div className={styles.card__prices}>
             <span className={styles.card__priceCurrent}>
-                {product.price} ₽
+              {product.price} ₽
             </span>
 
                         {product.oldPrice && (
                             <span className={styles.card__priceOld}>
-                    {product.oldPrice} ₽
-                </span>
+                {product.oldPrice} ₽
+              </span>
                         )}
                     </div>
                 </div>
@@ -50,7 +71,6 @@ export const ProductCard = ({ product }: ProductCardProps) => {
                     </button>
                 </div>
             </div>
-
         </div>
     );
 };

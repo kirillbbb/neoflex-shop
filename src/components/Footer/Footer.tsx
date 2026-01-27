@@ -1,20 +1,15 @@
 import styles from './Footer.module.scss';
+import {Link} from "react-router-dom";
 
-interface FooterProps {
-    isWide?: boolean;
-}
-
-export const Footer = ({ isWide }: FooterProps) => {
+export const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div
-                className={`${styles.container} ${
-                    isWide ? styles.containerWide : ''}`}>
+            <div className="container">
                 <div className={styles.footer__box}>
                     <div className={styles.footer__logo}>QPICK</div>
 
                     <div className={styles.footer__links}>
-                        <a href="#">Избранное</a>
+                        <Link to="/favorites">Избранное</Link>
                         <a href="#">Корзина</a>
                         <a href="#">Контакты</a>
                     </div>
