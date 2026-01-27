@@ -86,3 +86,21 @@
   font-size: 17px;
   font-weight: 600;
 }
+@media (max-width: 1200px) {
+  .card {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    max-width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}

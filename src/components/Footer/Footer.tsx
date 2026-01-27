@@ -10,7 +10,7 @@ export const Footer = () => {
 
                     <div className={styles.footer__links}>
                         <Link to="/favorites">Избранное</Link>
-                        <a href="#">Корзина</a>
+                        <Link to="/cart">Корзина</Link>
                         <a href="#">Контакты</a>
                     </div>
 

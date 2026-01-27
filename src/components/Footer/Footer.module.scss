@@ -64,7 +64,7 @@
   color: var(--lang-default);
 }
 
-.footer__langActive {
+.footer__lang button.footer__langActive {
   font-weight: 700;
   color: var(--price-main);
 }
@@ -79,4 +79,23 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer__logo {
+    display: none;
+  }
+  .footer__socials {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .footer__links {
+    font-size: 15px;}
+  .footer__service{
+    font-size: 15px;}
+  .footer__langIcon {
+    width: 16px;
+    height: 16px;
+  }
 }
