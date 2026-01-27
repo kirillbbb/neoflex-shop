@@ -7,7 +7,7 @@ export const products: Product[] = [
         price: 2927,
         oldPrice: 3527,
         rate: 4.7,
-        img: '/img/byz.png',
+        img: '/images/byz.png',
         category: 'wired',
     },
     {
@@ -15,7 +15,7 @@ export const products: Product[] = [
         title: 'Apple EarPods',
         price: 2327,
         rate: 4.5,
-        img: '/img/earpods1.png',
+        img: '/images/earpods1.png',
         category: 'wired',
     },
     {
@@ -23,7 +23,7 @@ export const products: Product[] = [
         title: 'Apple EarPods',
         price: 2327,
         rate: 4.5,
-        img: '/img/earpods2.png',
+        img: '/images/earpods2.png',
         category: 'wired',
     },
     {
@@ -31,7 +31,7 @@ export const products: Product[] = [
         title: 'Apple BYZ S852I',
         price: 2927,
         rate: 4.7,
-        img: '/img/byz-copy.png',
+        img: '/images/byz-copy.png',
         category: 'wired',
     },
     {
@@ -39,7 +39,7 @@ export const products: Product[] = [
         title: 'Apple EarPods',
         price: 2327,
         rate: 4.5,
-        img: '/img/earpods1-copy.png',
+        img: '/images/earpods1-copy.png',
         category: 'wired',
     },
     {
@@ -47,7 +47,7 @@ export const products: Product[] = [
         title: 'Apple EarPods',
         price: 2327,
         rate: 4.5,
-        img: '/img/earpods2-copy.png',
+        img: '/images/earpods2-copy.png',
         category: 'wired',
     },
     {
@@ -55,7 +55,7 @@ export const products: Product[] = [
         title: 'Apple AirPods',
         price: 9527,
         rate: 4.7,
-        img: '/img/airpods.png',
+        img: '/images/airpods.png',
         category: 'wireless',
     },
     {
@@ -63,7 +63,7 @@ export const products: Product[] = [
         title: 'GERLAX GH-04',
         price: 6527,
         rate: 4.7,
-        img: '/img/gh-04.png',
+        img: '/images/gh-04.png',
         category: 'wireless',
     },
     {
@@ -71,7 +71,7 @@ export const products: Product[] = [
         title: 'BOROFONE BO4',
         price: 7527,
         rate: 4.7,
-        img: '/img/bo4.png',
+        img: '/images/bo4.png',
         category: 'wireless',
     },
 ];
