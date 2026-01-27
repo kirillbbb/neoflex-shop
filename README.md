@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# Neoflex Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SPA-приложение интернет-магазина аудио-аксессуаров, реализованное в рамках тестового задания.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Стек технологий
 
-## React Compiler
+- React
+- React Router
+- TypeScript
+- Vite
+- SCSS (CSS Modules)
+- ESLint + Prettier
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Что реализовано
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Разработано SPA-приложение с использованием React, React Router и TypeScript.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Реализованы три основные страницы:
+- каталог товаров;
+- корзина с выбранными товарами;
+- страница избранного.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Настроен масштабируемый роутинг с использованием React Router.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Данные о товарах хранятся в виде массива и используются
+для динамической генерации карточек товаров.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Реализована логика добавления товаров в корзину:
+- при нажатии на кнопку «Купить» счётчик товаров увеличивается;
+- состояние корзины является общим для всего приложения.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Реализовано изменение количества товаров в корзине:
+- увеличение и уменьшение количества;
+- автоматический перерасчёт общей суммы и количества товаров.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Реализована возможность удаления товаров из корзины.
+
+Реализован переход из корзины обратно на главную страницу
+через логотип.
+
+Все интерактивные элементы (кнопки, ссылки, иконки)
+имеют hover-состояния и поддерживают переходы.
+
+Добавлена адаптивность для всех основных экранов.
+
+## Запуск проекта
+- npm install
+- npm run dev
+---
+
+
+##  Структура проекта
+
+```text
+neoflex-shop/
+├── public/
+│   ├── icons/
+│   └── images/
+│
+├── src/
+│   ├── app/
+│   │   ├── App.tsx
+│   │   └── router.tsx
+│   │
+│   ├── components/
+│   │   ├── CartItem/
+│   │   │   ├── CartItem.tsx
+│   │   │   └── CartItem.module.scss
+│   │   ├── Footer/
+│   │   │   ├── Footer.tsx
+│   │   │   └── Footer.module.scss
+│   │   ├── Header/
+│   │   │   ├── Header.tsx
+│   │   │   └── Header.module.scss
+│   │   └── ProductCard/
+│   │       ├── ProductCard.tsx
+│   │       └── ProductCard.module.scss
+│   │
+│   ├── context/
+│   │   ├── CartContext.tsx
+│   │   ├── CartProvider.tsx
+│   │   └── FavoritesContext.tsx
+│   │
+│   ├── data/
+│   │   └── products.ts
+│   │
+│   ├── hooks/
+│   │   └── useCart.ts
+│   │
+│   ├── layouts/
+│   │   └── Layout.tsx
+│   │
+│   ├── pages/
+│   │   ├── CartPage/
+│   │   │   ├── CartPage.tsx
+│   │   │   └── CartPage.module.scss
+│   │   ├── CatalogPage/
+│   │   │   └── CatalogPage.tsx
+│   │   └── FavoritePage/
+│   │       └── FavoritesPage.tsx
+│   │
+│   ├── styles/
+│   │   ├── global.scss
+│   │   ├── layout.scss
+│   │   └── variables.scss
+│   │
+│   ├── types/
+│   │   ├── cart.ts
+│   │   └── product.ts
+│   │
+│   └── main.tsx
+│
+├── eslint.config.js
+├── package.json
+├── tsconfig.json
+└── vite.config.ts

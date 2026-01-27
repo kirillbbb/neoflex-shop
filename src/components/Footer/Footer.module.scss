@@ -12,7 +12,7 @@
 }
 
 .footer__logo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 1;
@@ -31,7 +31,9 @@
   font-weight: 400;
   color: var(--black);
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 
   &:hover {
     color: var(--price-main);
@@ -62,7 +64,7 @@
   padding: 0;
   cursor: pointer;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: var(--lang-default);
@@ -87,7 +89,9 @@
 
 .footer__social {
   display: inline-flex;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 
   img {
     width: 24px;

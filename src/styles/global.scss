@@ -1,5 +1,5 @@
-@import './variables';
-@import './layout';
+@import "./variables";
+@import "./layout";
 
 *,
 *::before,
@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
 }
@@ -20,7 +20,7 @@ a {
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: none;
   border: none;
   padding: 0;

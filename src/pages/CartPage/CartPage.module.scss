@@ -19,7 +19,6 @@
 .summary {
   position: sticky;
   top: 100px;
-
 }
 
 .empty {
@@ -43,7 +42,7 @@
   display: flex;
   justify-content: space-between;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 17px;
 }
@@ -60,7 +59,7 @@
   border-radius: 20px;
 
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 17px;
 
@@ -77,14 +76,12 @@
   .layout {
     display: grid;
     grid-template-columns: minmax(0, 550px) 350px;
-
   }
 }
 
 @media (max-width: 992px) {
   .layout {
     grid-template-columns: minmax(0, 400px) 300px;
-
   }
 }
 @media (max-width: 768px) {
@@ -101,8 +98,5 @@
     position: static;
     width: 100%;
     margin-top: 16px;
-
   }
-
-
 }

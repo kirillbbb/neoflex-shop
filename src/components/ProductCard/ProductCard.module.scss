@@ -1,5 +1,5 @@
 .card {
-  position:relative;
+  position: relative;
   width: 100%;
   max-width: 350px;
 
@@ -10,8 +10,7 @@
   display: flex;
   flex-direction: column;
 
-  box-shadow:
-          0px 0px 12px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.09);
 }
 
 .card__image {
@@ -87,7 +86,6 @@
 }
 
 .card__buy {
-
   font-size: 17px;
   font-weight: 600;
   color: var(--text-main);
@@ -133,10 +131,8 @@
   }
 }
 
-
-
 @media (max-width: 1200px) {
-  .card{
+  .card {
     height: 350px;
   }
   .card__image img {
