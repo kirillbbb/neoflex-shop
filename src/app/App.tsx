@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router-dom";
-import { CartProvider } from "@/context/CartContext";
+import { CartProvider } from "@/context/CartProvider";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { router } from "./router";
 

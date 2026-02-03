@@ -21,7 +21,6 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <div className={styles.card}>
-      {/* ❤️ ИЗБРАННОЕ */}
       <button
         className={styles.card__favorite}
         onClick={() => toggleFavorite(product.id)}
