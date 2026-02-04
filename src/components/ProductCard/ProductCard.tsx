@@ -6,7 +6,7 @@ import styles from "./ProductCard.module.scss";
 
 interface ProductCardProps {
     product: Product;
-    onPreview: (product: Product) => void;
+    onPreview?: (product: Product) => void;
 }
 
 export const ProductCard = ({ product, onPreview }: ProductCardProps) => {
@@ -23,11 +23,10 @@ export const ProductCard = ({ product, onPreview }: ProductCardProps) => {
     return (
         <div
             className={styles.card}
-            onClick={() => onPreview(product)}
+            onClick={() => onPreview?.(product)}
             role="button"
             tabIndex={0}
         >
-            {/* избранное */}
             <button
                 className={styles.card__favorite}
                 onClick={(e) => {
@@ -46,12 +45,10 @@ export const ProductCard = ({ product, onPreview }: ProductCardProps) => {
                 />
             </button>
 
-            {/* изображение */}
             <div className={styles.card__image}>
                 <img src={product.img} alt={product.title} />
             </div>
 
-            {/* информация */}
             <div className={styles.card__info}>
                 <div className={styles.card__top}>
                     <div className={styles.card__title}>{product.title}</div>
