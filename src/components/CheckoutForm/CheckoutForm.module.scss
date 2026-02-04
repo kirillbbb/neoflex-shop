@@ -1,0 +1,86 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &:focus {
+    border-color: var(--price-main);
+    outline: none;
+  }
+}
+
+
+.paymentTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0 12px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.submit {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--price-main);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--price-old);
+  }
+
+  &:disabled {
+    background: #cfcfcf;
+    cursor: not-allowed;
+  }
+}

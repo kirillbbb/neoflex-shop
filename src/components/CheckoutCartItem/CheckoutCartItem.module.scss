@@ -1,0 +1,33 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+}
+
+.total {
+  font-size: 14px;
+  font-weight: 600;
+}

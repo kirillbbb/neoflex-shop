@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { CartContext } from "@/context/CartContext";
 import { CartItem } from "@/components/CartItem/CartItem";
 import styles from "./CartPage.module.scss";
+import { useNavigate } from "react-router-dom";
+
+
 
 export const CartPage = () => {
   const cart = useContext(CartContext);
@@ -9,6 +12,8 @@ export const CartPage = () => {
 
   const { items, totalPrice, increase, decrease, remove } = cart;
   const formattedTotal = totalPrice.toLocaleString("ru-RU");
+  const navigate = useNavigate();
+
 
   return (
     <div className="container container--wide">
@@ -37,7 +42,10 @@ export const CartPage = () => {
                 <span>₽ {formattedTotal}</span>
               </div>
 
-              <button className={styles.checkout}>Перейти к оформлению</button>
+              <button
+                  className={styles.checkout}
+                  onClick={() => navigate("/checkout")}
+              >Перейти к оформлению</button>
             </div>
           </aside>
         </div>

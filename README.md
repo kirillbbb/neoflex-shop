@@ -19,10 +19,11 @@ SPA-приложение интернет-магазина аудио-аксес
 
 Разработано SPA-приложение с использованием React, React Router и TypeScript.
 
-Реализованы три основные страницы:
+Реализованы основные страницы приложения:
 - каталог товаров;
 - корзина с выбранными товарами;
 - страница избранного.
+- страница оформления заказа.
 
 Настроен масштабируемый роутинг с использованием React Router.
 
@@ -47,6 +48,14 @@ SPA-приложение интернет-магазина аудио-аксес
 
 Добавлена адаптивность для всех основных экранов.
 
+В каталоге реализовано модальное окно с подробной информацией о товаре:
+
+Реализована страница оформления заказа
+
+Реализован переход из корзины на страницу оформления заказа
+с формой оплаты.
+
+
 ## Запуск проекта
 - npm install
 - npm run dev
@@ -68,17 +77,13 @@ neoflex-shop/
 │   │
 │   ├── components/
 │   │   ├── CartItem/
-│   │   │   ├── CartItem.tsx
-│   │   │   └── CartItem.module.scss
+│   │   ├── CheckoutCartItem/
+│   │   ├── CheckoutForm/
 │   │   ├── Footer/
-│   │   │   ├── Footer.tsx
-│   │   │   └── Footer.module.scss
 │   │   ├── Header/
-│   │   │   ├── Header.tsx
-│   │   │   └── Header.module.scss
-│   │   └── ProductCard/
-│   │       ├── ProductCard.tsx
-│   │       └── ProductCard.module.scss
+│   │   ├── Modal/
+│   │   ├── ProductCard/
+│   │   └── ProductModal/
 │   │
 │   ├── context/
 │   │   ├── CartContext.tsx
@@ -96,12 +101,9 @@ neoflex-shop/
 │   │
 │   ├── pages/
 │   │   ├── CartPage/
-│   │   │   ├── CartPage.tsx
-│   │   │   └── CartPage.module.scss
 │   │   ├── CatalogPage/
-│   │   │   └── CatalogPage.tsx
+│   │   ├── CheckoutPage/
 │   │   └── FavoritePage/
-│   │       └── FavoritesPage.tsx
 │   │
 │   ├── styles/
 │   │   ├── global.scss
